@@ -48,5 +48,12 @@ Sock5Lite.exe --install Sock5Lite.ini
 3. 在项目目录中执行以下命令：
 
 ```
-go build -o Sock5Lite.exe
+go mod tidy
+go build -o Sock5Lite.exe main.go
 ```
+
+## 注意事项
+
+- 程序运行时会显示"Sock5Lite is running"提示
+- 作为系统服务运行时，可以通过Windows服务管理器管理服务
+- 如需卸载服务，可使用Windows服务管理器或sc命令
